@@ -1,14 +1,21 @@
+
 default:
   image: node:16.16.0
-
-
-
+deploy_preview:
+  stage: deploy
+  except:
+    - main
+  script:
+    - npm install --global vercel
+    - vercel pull --yes --environment=preview --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel build --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel deploy --prebuilt  --token=5iuNrQHFTbohJc39SiEruGEw
 deploy_production:
   stage: deploy
   only:
     - main
   script:
     - npm install --global vercel
-    - vercel pull --yes --environment=production --token=HDDRdtDvvklV4mzlRGgi1i1f
-    - vercel build --prod --token=HDDRdtDvvklV4mzlRGgi1i1f
-    - vercel deploy --prebuilt --prod --token=HDDRdtDvvklV4mzlRGgi1i1f
+    - vercel pull --yes --environment=production --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel build --prod --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel deploy --prebuilt --prod --token=5iuNrQHFTbohJc39SiEruGEw
