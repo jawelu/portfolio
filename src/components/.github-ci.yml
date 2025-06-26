@@ -9,6 +9,6 @@ deploy_production:
     - main
   script:
     - npm install --global vercel
-    - vercel pull --yes --environment=production --token=HDDRdtDvvklV4mzlRGgi1i1f
-    - vercel build --prod --token=HDDRdtDvvklV4mzlRGgi1i1f
-    - vercel deploy --prebuilt --prod --token=HDDRdtDvvklV4mzlRGgi1i1f
+    - vercel pull --yes --environment=production --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel build --prod --token=5iuNrQHFTbohJc39SiEruGEw
+    - vercel deploy --prebuilt --prod --token=5iuNrQHFTbohJc39SiEruGEw
