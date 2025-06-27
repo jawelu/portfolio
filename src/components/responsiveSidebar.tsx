@@ -9,6 +9,7 @@ import { FaGitlab } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { usePathname } from 'next/navigation'
 import clsx from "clsx";
+import Link from 'next/link';
 export default function ResponsiveSidebarComponent() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
@@ -34,6 +35,7 @@ export default function ResponsiveSidebarComponent() {
           <SidebarItems>
             <SidebarItemGroup>
               <SidebarItem
+              as={Link}
                  className={clsx('hover:bg-gray-200 rounded-none', {
                   'bg-gray-100': pathname === '/'
               })}
@@ -41,6 +43,7 @@ export default function ResponsiveSidebarComponent() {
                 Home
               </SidebarItem>
               <SidebarItem
+              as={Link}
                     className={clsx('hover:bg-gray-200 rounded-none', {
                       'bg-gray-100': pathname === '/projects'
                   })}
@@ -48,6 +51,7 @@ export default function ResponsiveSidebarComponent() {
                 Projects
               </SidebarItem>
               <SidebarItem
+              as={Link}
                    className={clsx('hover:bg-gray-200 rounded-none', {
                     'bg-gray-100': pathname === '/blogs'
                 })}
@@ -55,6 +59,7 @@ export default function ResponsiveSidebarComponent() {
                 Blogs
               </SidebarItem>
               <SidebarItem
+              as={Link}
                   className={clsx('hover:bg-gray-200 rounded-none', {
                     'bg-gray-100': pathname === '/cv'
                 })}
@@ -62,6 +67,7 @@ export default function ResponsiveSidebarComponent() {
                 CV
               </SidebarItem>
               <SidebarItem
+              as={Link}
                  className={clsx('hover:bg-gray-200 rounded-none', {
                   'bg-gray-100': pathname === '/contact'
               })}
