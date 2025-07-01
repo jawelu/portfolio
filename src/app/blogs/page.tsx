@@ -1,6 +1,6 @@
 export default function BlogPage() {
     return (
-        <div>
+        <div className="text-black">
             this is Blog page
         </div>
     )

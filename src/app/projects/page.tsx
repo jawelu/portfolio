@@ -1,3 +1,4 @@
+
 import ProjectCard from "@/components/project";
 
 export default function ProjectsPage() {
@@ -23,3 +24,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
